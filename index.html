@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Google Sign In</title>
+        <meta name="google-signin-client_id" content="896990445920-olt7eeull2dhvm1c6g3mrlq6o61d0im3.apps.googleusercontent.com">
+        <script src="https://apis.google.com/js/platform.js" async defer></script> <!--async defer helps in loading -->
+        <body>
+            <h1>Web app google login</h1>
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+            <button onclick="signOut()">Sign Out</button>
+
+        </body>
+        <script>
+            function onSignIn(googleUser){
+                var profile = googleUser.getBasicProfile()
+                console.log('User is ' + JSON.stringify(profile))
+
+                var element = document.createElement('img')
+                image.setAttribute('src', profile.getImageUrl())
+                element.append(image)
+
+            }
+        </script>
+
+    </head>
+</html>
